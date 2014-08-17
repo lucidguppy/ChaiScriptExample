@@ -1,7 +1,7 @@
 #include <chaiscript/chaiscript.hpp>
 #include <string>
 
-std::string hello_world()
+std::string helloWorld()
 {
   return "Hello World";
 }
@@ -9,6 +9,6 @@ std::string hello_world()
 CHAISCRIPT_MODULE_EXPORT chaiscript::ModulePtr create_chaiscript_module_myModule()
 {
   chaiscript::ModulePtr m(new chaiscript::Module());
-  m->add(chaiscript::fun(hello_world), "hello_world");
+  m->add(chaiscript::fun(helloWorld), "helloWorld");
   return m;
 }
